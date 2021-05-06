@@ -314,12 +314,12 @@ class Ui(object):
         if not lyrics:
             self.now_lyric = "暂无歌词 ~>_<~ \n"
             self.post_lyric = ""
-            if dbus_activity and self.config.get("osdlyrics"):
+            if dbus_activity:# and self.config.get("osdlyrics"):
                 self.now_playing = "{} - {}\n".format(name, artist)
         else:
             self.update_lyrics(now_playing, lyrics, tlyrics)
 
-        if dbus_activity and self.config.get("osdlyrics"):
+        if dbus_activity:# and self.config.get("osdlyrics"):
             try:
                 bus = dbus.SessionBus().get_object("org.musicbox.Bus", "/")
                 # TODO 环境问题，没有试过桌面歌词，此处需要了解的人加个刷界面操作

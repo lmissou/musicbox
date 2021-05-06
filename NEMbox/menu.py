@@ -248,8 +248,8 @@ class Menu(object):
         self.ui.screen.refresh()
 
     def send_kill(self, signum, fram):
-        if pyqt_activity:
-            stop_lyrics_process()
+        # if pyqt_activity:
+            # stop_lyrics_process()
         self.player.stop()
         self.cache.quit()
         self.storage.save()
@@ -584,8 +584,8 @@ class Menu(object):
         self.stack.append(
             [self.datatype, self.title, self.datalist, self.offset, self.index]
         )
-        if pyqt_activity:
-            show_lyrics_new_process()
+        # if pyqt_activity:
+            # show_lyrics_new_process()
         pre_key = -1
         keylist = self.key_list
         self.parser = cmd_parser(keylist)

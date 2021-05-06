@@ -28,6 +28,7 @@ readme = "README.md"
 repository = "https://github.com/darknessomi/musicbox"
 
 [tool.poetry.dependencies]
+# dbus-python = "^1.2.16"
 fuzzywuzzy = "^0.18.0"
 importlib-metadata = "^2.0.0"
 pycryptodomex = "^3.9.8"
@@ -35,6 +36,7 @@ python = "^3.6"
 python-Levenshtein = "^0.12.0"
 requests = "^2.24.0"
 requests-cache = "^0.5.2"
+dbus-python = "^1.2.16"
 
 [tool.poetry.dev-dependencies]
 black = {version = "^20.8b1", python = "^3.7"}
@@ -44,6 +46,7 @@ pytest = "^6.1.1"
 
 [tool.poetry.scripts]
 musicbox = "NEMbox.__main__:start"
+musicbox-stdlyrics = "NEMbox.stdlyrics:main"
 
 [build-system]
 build-backend = "poetry.core.masonry.api"
